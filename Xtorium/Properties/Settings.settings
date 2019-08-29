@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Xtorium.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Home" Type="(Web Service URL)" Scope="User">
+      <Value Profile="(Default)">bing.com</Value>
+    </Setting>
+    <Setting Name="NameID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">User</Value>
+    </Setting>
+    <Setting Name="InitialLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FavColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">0, 183, 195</Value>
+    </Setting>
+    <Setting Name="XDefaultColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">0, 183, 195</Value>
+    </Setting>
+    <Setting Name="emailAdress" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultSearchEngine" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Bing</Value>
+    </Setting>
+    <Setting Name="ShowClockOnHub" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FirstTimeRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="IDShowInMenu" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="HomeButton" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bing.com</Value>
+    </Setting>
+    <Setting Name="HUBShowMe" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="HUBShowApps" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="HUBShowAppsEmbedded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ThemeWorB" Type="System.String" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="FeedEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

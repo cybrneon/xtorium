@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.WinForms.63.0.1\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.63.0.1\build\CefSharp.WinForms.props')" />
+  <Import Project="..\packages\CefSharp.Common.63.0.1\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.63.0.1\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props')" />
+  <Import Project="..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props" Condition="Exists('..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F252299-13CB-4D61-83E3-BEA931833E95}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xtorium</RootNamespace>
+    <AssemblyName>Xtorium</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publier\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ProductName>Xtorium</ProductName>
+    <PublisherName>adamclouder</PublisherName>
+    <SuiteName>Xtorium</SuiteName>
+    <MinimumRequiredVersion>10.16.12.1</MinimumRequiredVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>18.63.3.2</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>94A4556DDD1028440D614D400BD012A4261B72F5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Xtorium_CléTemporaire.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>XtoriumLogo-ICON.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\UserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\UserAccount.Designer.cs">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Clock\ClockApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Apps\Clock\ClockApp.Designer.cs">
+      <DependentUpon>ClockApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\XTAB\ButtonX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\XTAB\TabControlX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\XTAB\TabControlX.Designer.cs">
+      <DependentUpon>TabControlX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\XTAB\TabPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\XTAB\TabPanelControl.Designer.cs">
+      <DependentUpon>TabPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11.Designer.cs">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Storage\DownloadHandler.cs" />
+    <Compile Include="Settings\ForDevelopers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\ForDevelopers.Designer.cs">
+      <DependentUpon>ForDevelopers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\AppsSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\AppsSettings.Designer.cs">
+      <DependentUpon>AppsSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\AboutSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\AboutSettings.Designer.cs">
+      <DependentUpon>AboutSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Note10\AboutNote10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Note10\AboutNote10.Designer.cs">
+      <DependentUpon>AboutNote10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserAccountMin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\UserAccountMin.Designer.cs">
+      <DependentUpon>UserAccountMin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserAccountSettingsBOX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\UserAccountSettingsBOX.Designer.cs">
+      <DependentUpon>UserAccountSettingsBOX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\HubSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\HubSettings.Designer.cs">
+      <DependentUpon>HubSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\BrowserSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\BrowserSettings.Designer.cs">
+      <DependentUpon>BrowserSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExperimentsLauncher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExperimentsLauncher.Designer.cs">
+      <DependentUpon>ExperimentsLauncher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FavoritesManager\AddFavorite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FavoritesManager\AddFavorite.Designer.cs">
+      <DependentUpon>AddFavorite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Clock\AboutClock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Clock\AboutClock.Designer.cs">
+      <DependentUpon>AboutClock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\FilesManager\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\FilesManager\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Sticky Notes\StickyNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Sticky Notes\StickyNotes.Designer.cs">
+      <DependentUpon>StickyNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteHistory.Designer.cs">
+      <DependentUpon>DeleteHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\FilesManager\FilesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\FilesManager\FilesManager.Designer.cs">
+      <DependentUpon>FilesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exitBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exitBox.Designer.cs">
+      <DependentUpon>exitBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\DownloadHandler.cs" />
+    <Compile Include="Apps\Note10\Note10_X.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Note10\Note10_X.Designer.cs">
+      <DependentUpon>Note10_X.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apps\Help Center\HelpCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Help Center\HelpCenter.Designer.cs">
+      <DependentUpon>HelpCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FavoritesManager\RenameLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FavoritesManager\RenameLink.Designer.cs">
+      <DependentUpon>RenameLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FavoritesManager\OrganizeFav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FavoritesManager\OrganizeFav.Designer.cs">
+      <DependentUpon>OrganizeFav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\PersonalizationSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\PersonalizationSettings.Designer.cs">
+      <DependentUpon>PersonalizationSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Settings\UserAccountSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\UserAccountSettings.Designer.cs">
+      <DependentUpon>UserAccountSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XEE.Designer.cs">
+      <DependentUpon>XEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\XGradientPanel64.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XSettingsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XSettingsUserControl.Designer.cs">
+      <DependentUpon>XSettingsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\UpdateAvailable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\UpdateAvailable.Designer.cs">
+      <DependentUpon>UpdateAvailable.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Account\UserAccount.resx">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Clock\ClockApp.resx">
+      <DependentUpon>ClockApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\XTAB\TabControlX.resx">
+      <DependentUpon>TabControlX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11.resx">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\ForDevelopers.resx">
+      <DependentUpon>ForDevelopers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\AppsSettings.resx">
+      <DependentUpon>AppsSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\AboutSettings.resx">
+      <DependentUpon>AboutSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Note10\AboutNote10.resx">
+      <DependentUpon>AboutNote10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\UserAccountMin.resx">
+      <DependentUpon>UserAccountMin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\UserAccountSettingsBOX.resx">
+      <DependentUpon>UserAccountSettingsBOX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\HubSettings.resx">
+      <DependentUpon>HubSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\BrowserSettings.resx">
+      <DependentUpon>BrowserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExperimentsLauncher.resx">
+      <DependentUpon>ExperimentsLauncher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoritesManager\AddFavorite.resx">
+      <DependentUpon>AddFavorite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Clock\AboutClock.resx">
+      <DependentUpon>AboutClock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\FilesManager\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Note10\Note10_X.resx">
+      <DependentUpon>Note10_X.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Sticky Notes\StickyNotes.resx">
+      <DependentUpon>StickyNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteHistory.resx">
+      <DependentUpon>DeleteHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\FilesManager\FilesManager.resx">
+      <DependentUpon>FilesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exitBox.resx">
+      <DependentUpon>exitBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Help Center\HelpCenter.resx">
+      <DependentUpon>HelpCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoritesManager\RenameLink.resx">
+      <DependentUpon>RenameLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoritesManager\OrganizeFav.resx">
+      <DependentUpon>OrganizeFav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\PersonalizationSettings.resx">
+      <DependentUpon>PersonalizationSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UserAccountSettings.resx">
+      <DependentUpon>UserAccountSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XEE.resx">
+      <DependentUpon>XEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XSettingsUserControl.resx">
+      <DependentUpon>XSettingsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\UpdateAvailable.resx">
+      <DependentUpon>UpdateAvailable.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Gravity-Regular.ttf" />
+    <None Include="Resources\left_arrow_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_arrow_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restart_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_math_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_sign_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globe_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_format_align_right_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_96px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_round_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advicetech_logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xtoria_logo_N96.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpCenter96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WebSurf logo.PNG" />
+    <None Include="Resources\Xtoria logo2.PNG" />
+    <None Include="Resources\websurf_white_back_logo.png" />
+    <None Include="Resources\Xtoria_round_logo200.PNG" />
+    <None Include="Resources\xtoria_logo_N120.PNG" />
+    <None Include="Resources\XtoriumLogo-031.png" />
+    <None Include="Resources\Calculator-96.png" />
+    <None Include="Resources\microphone_104px.png" />
+    <None Include="Resources\settings_96px1.png" />
+    <None Include="Resources\Notelogo36.png" />
+    <None Include="Resources\close_black-58.png" />
+    <None Include="Resources\minimize_black-56.png" />
+    <None Include="Resources\maximize_black-57.png" />
+    <None Include="Resources\ic_music_note_white_48pt_2x.png" />
+    <None Include="Resources\appbar.question.png" />
+    <None Include="Resources\StoreLogo.scale-240.png" />
+    <None Include="Resources\close_sign_104pxW.png" />
+    <None Include="Resources\network&amp;wireless_white-41.png" />
+    <None Include="Resources\personalization_white-43.png" />
+    <None Include="Resources\update_white-49.png" />
+    <None Include="Resources\left_arrow_black.png" />
+    <None Include="Resources\right_arrow_black.png" />
+    <None Include="Resources\refresh_black.png" />
+    <None Include="Resources\hoome_black.png" />
+    <None Include="Resources\menu_black.png" />
+    <None Include="Resources\menu_black1.png" />
+    <None Include="Resources\user_white-03.png" />
+    <None Include="Resources\Menu_white-23.png" />
+    <None Include="Resources\Settings_white-33.png" />
+    <None Include="Resources\XEngine11_Logo.jpg" />
+    <None Include="Resources\Clock_black-30.png" />
+    <None Include="Resources\Clock_white-31.png" />
+    <None Include="Resources\Settings_black-32.png" />
+    <None Include="Resources\profile.jpg" />
+    <None Include="Resources\Menu_black-22.png" />
+    <None Include="Resources\network&amp;wireless_black-40.png" />
+    <None Include="Resources\personalization_black-42.png" />
+    <None Include="Resources\xtorium_logos_alt-05.jpg" />
+    <None Include="Resources\animated fireplace.gif" />
+    <None Include="Resources\Collapse Arrow_64px.png" />
+    <None Include="Resources\Expand Arrow_64px.png" />
+    <None Include="Resources\telegram_logo.png" />
+    <Content Include="User\profile.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XtoriumLogo-ICON.ico" />
+    <None Include="Resources\loader.gif" />
+    <None Include="Resources\loader2.png" />
+    <None Include="Resources\Explorer_alt_2_96.png" />
+    <None Include="Resources\sticky_notes_logo125.jpg" />
+    <None Include="Resources\sticky_notes_logo32.jpg" />
+    <None Include="Resources\ic_format_bold_2x.png" />
+    <None Include="Resources\ic_format_italic_2x.png" />
+    <None Include="Resources\ic_format_underlined_2x.png" />
+    <None Include="Resources\ic_format_strikethrough_2x.png" />
+    <None Include="Resources\appbar.text.align.left.png" />
+    <None Include="Resources\appbar.text.align.center.png" />
+    <None Include="Resources\appbar.text.align.right.png" />
+    <None Include="Resources\appbar.text.align.justify.png" />
+    <None Include="Resources\Explorer_alt_2_24.png" />
+    <None Include="Resources\AOX_close.png" />
+    <None Include="Resources\AOX_expand.png" />
+    <None Include="Resources\AOX_minimize.png" />
+    <None Include="Resources\adamclouderLOGOMini-01.png" />
+    <None Include="Resources\XtoriumLogo-04.png" />
+    <None Include="Resources\XtoriumLogo-03.png" />
+    <Content Include="Resources\FileRes\favorites.xml" />
+    <Content Include="Resources\FileRes\history.xml" />
+    <None Include="Resources\star_96px.png" />
+    <None Include="Resources\ProjectArtist_logo-01.png" />
+    <None Include="Resources\ProjectArtist_logo_02.png" />
+    <None Include="Resources\GooglePlayMusic_logo.png" />
+    <None Include="Resources\Spotify-android.png" />
+    <None Include="Resources\Clock-64.png" />
+    <None Include="Resources\Menu-96.png" />
+    <None Include="Resources\Menu-32.png" />
+    <None Include="Resources\trash_64px.png" />
+    <None Include="Resources\XENGINE_logo.png" />
+    <None Include="Resources\xtoria_logo_N64.PNG" />
+    <None Include="Resources\contacts_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="html-ressources\css\" />
+    <Folder Include="html-ressources\fonts\" />
+    <Folder Include="html-ressources\html\" />
+    <Folder Include="html-ressources\js\" />
+    <Folder Include="Tabs\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.3.3239.1723\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.3.3239.1723\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.63.0.1\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.63.0.1\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.63.0.1\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.63.0.1\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.63.0.1\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.63.0.1\build\CefSharp.WinForms.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.63.0.1\build\CefSharp.WinForms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.63.0.1\build\CefSharp.WinForms.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.63.0.1\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.63.0.1\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.WinForms.63.0.1\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.63.0.1\build\CefSharp.WinForms.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

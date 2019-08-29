@@ -1,0 +1,8 @@
+﻿Xtorium 18.63
+Update 2.2
+
+What's new :
+-XEngine upgraded to version 63.
+-New Apps and new features.
+-Bug fixes.
+-Faster and better with only 64 bit support.

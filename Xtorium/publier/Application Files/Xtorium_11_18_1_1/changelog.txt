@@ -1,0 +1,12 @@
+﻿Xtorium 11.18
+Update 1.1
+
+What's new :
+-New UI! and UX : Improved design and new experience.
+-XEngine is now at version 11 : Faster, secure and compatible 
+-New Personalization settings.
+-New Apps.
+-New Settings App.
+-Xtorium ID is now in version 1.5 stable.
+-Now Xtorium works on 32 and 64 bits machines.
+-New improved way to update Xtorium.
