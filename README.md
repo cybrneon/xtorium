@@ -1,4 +1,6 @@
-#XTORIUM SOURCE CODE
+# XTORIUM SOURCE CODE
+## THIS PROJECT WAS LAST UPDATED IN 2017-2018, AND IS PROBABLY NOT WORKING.
+## IT IS STILL PUBLIC ONLY FOR ARCHIVE PURPOSES.
 
 ## Introduction
 Xtorium. Best web browser available for everyone. Personal, so the user got all the power on the software.
@@ -29,11 +31,3 @@ C: Build
 D: Revision
 
 There are usually two builds a month (ex. 18.63.1.1, 18.63.2.1)
-
-## Contribute
-Always do things that help the user such as creating new features, new apps, bugs solutions, and so on... And also by giving the user power, without removing existing features.
-Or create a custom version of the browser. BUT please, let me know what you have done, it's always great to see people's work!
-
-Thanks and have fun.
-
- _adamclouder_
